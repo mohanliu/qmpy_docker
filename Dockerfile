@@ -16,12 +16,12 @@ WORKDIR /root
 RUN wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
 RUN chmod +x miniconda.sh
 RUN ./miniconda.sh -b
-RUN /root/miniconda2/bin/conda update --yes conda
+RUN /root/miniconda2/bin/conda update --yes --quiet conda
 ENV PATH /root/miniconda2/bin:$PATH
 RUN conda create -n oqmd -y
 
-RUN bash -c 'source activate oqmd && conda install --yes python=2.7 atlas numpy scipy matplotlib'
-RUN bash -c 'source activate oqmd && conda install --yes scikit-learn lxml cython'
+RUN bash -c 'source activate oqmd && conda install --yes --quiet python=2.7 atlas numpy scipy matplotlib'
+RUN bash -c 'source activate oqmd && conda install --yes --quiet scikit-learn lxml cython'
 RUN bash -c 'source activate oqmd && pip install -r requirements.txt'
 RUN git clone https://github.com/wolverton-research-group/qmpy.git 
 RUN echo '/root/qmpy' >> '/root/miniconda2/envs/oqmd/lib/python2.7/site-packages/qmpy.pth'
