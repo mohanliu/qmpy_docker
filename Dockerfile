@@ -16,6 +16,6 @@ RUN ./miniconda.sh -b
 RUN /root/miniconda2/bin/conda update --yes conda
 RUN /root/miniconda2/bin/conda create -n oqmd -y
 
-RUN apt-get install build-essential default-libmysqlclient-dev 
-RUN apt-get install build-essential python-dev
-RUN apt install libgl1-mesa-glx
+RUN apt-get install -y build-essential default-libmysqlclient-dev 
+RUN apt-get install -y build-essential python-dev
+RUN apt install -y libgl1-mesa-glx
