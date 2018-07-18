@@ -10,7 +10,7 @@ RUN wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O 
 RUN chmod +x miniconda.sh
 RUN ./miniconda.sh -b
 RUN export PATH=/root/miniconda2/bin:$PATH
-#RUN conda update --yes conda
+RUN /root/miniconda2/bin/conda update --yes conda
 
 COPY .bashrc /root/.bashrc
 COPY .vimrc /root/.vimrc
