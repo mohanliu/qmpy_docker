@@ -13,5 +13,7 @@ RUN wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O 
 RUN chmod +x miniconda.sh
 RUN ./miniconda.sh -b
 RUN /root/miniconda2/bin/conda update --yes conda
-
 RUN /root/miniconda2/bin/conda create -n oqmd -y
+
+RUN apt-get install build-essential default-libmysqlclient-dev 
+RUN apt-get install build-essential python-dev
