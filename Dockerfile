@@ -4,8 +4,7 @@ MAINTAINER mohanliu <mohan@u.northwestern.edu>
 
 RUN apt-get update
 RUN apt-get install -y git vim wget bzip2
-RUN apt-get install -y build-essential default-libmysqlclient-dev 
-RUN apt-get install -y build-essential python-dev
+RUN apt-get install -y build-essential default-libmysqlclient-dev python-dev
 RUN apt install -y libgl1-mesa-glx
 
 COPY .bashrc /root/.bashrc
