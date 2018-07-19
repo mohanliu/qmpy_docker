@@ -25,4 +25,4 @@ RUN bash -c 'source activate oqmd && pip install -r requirements.txt'
 RUN git clone https://github.com/wolverton-research-group/qmpy.git 
 RUN echo '/root/qmpy' >> '/root/miniconda2/envs/oqmd/lib/python2.7/site-packages/qmpy.pth'
 
-CMD ["source activate oqmd && python -i -c 'from qmpy import *'"]
+CMD ["source activate oqmd"]
