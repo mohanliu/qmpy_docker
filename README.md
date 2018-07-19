@@ -4,7 +4,7 @@
   - `export DOCKERID=oqmduser`
   - `docker build -t $DOCKERID/qmpy .`
   
-## Pull mysql 5.7 images
+## Pull mysql 5.7 image
   - `docker pull mysql/mysql-server:5.7`
 
 ## Use Docker to launch qmpy
