@@ -1,7 +1,7 @@
 # qmpy_docker
 
-## Get qmpy Docker image
-- Create qmpy image by your self
+## Get qmpy Docker image (either of the following two ways)
+- Create qmpy image by yourself
   - `export DOCKERID=oqmduser`
   - `docker build -t $DOCKERID/qmpy .`
   
