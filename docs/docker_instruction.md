@@ -2,4 +2,4 @@
 - List:
     - `$ docker volume ls`
 - Remove:
-    - `$docker volume rm _volumename_`
+    - `$docker volume rm <volume_name>`
