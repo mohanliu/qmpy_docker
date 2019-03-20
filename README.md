@@ -1,11 +1,12 @@
 # qmpy_docker
 
-## Create qmpy image 
+## Get qmpy Docker image
+- Create qmpy image by your self
   - `export DOCKERID=oqmduser`
   - `docker build -t $DOCKERID/qmpy .`
   
-## Pull mysql 5.7 image
-  - `docker pull mysql/mysql-server:5.7`
+- Pull pre-built qmpy image
+  - `docker pull mervyn1937/qmpy`
 
 ## Use Docker to launch qmpy
   - qmpy environment
