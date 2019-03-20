@@ -1,17 +1,15 @@
 # qmpy_docker
 
-## Get qmpy Docker image (either of the following two ways)
+## Get qmpy Docker image 
+- Pull pre-built qmpy image (_Recommended_)
+  - `docker pull oqmduser/qmpy`
 - Create qmpy image by yourself
-  - `export DOCKERID=oqmduser`
-  - `docker build -t $DOCKERID/qmpy .`
+  - `docker build -t oqmduser/qmpy .`
   
-- Pull pre-built qmpy image
-  - `docker pull $DOCKERID/qmpy`
-
 ## Use Docker to launch qmpy
   - qmpy environment
-    - `docker run -it --rm $DOCKERID/qmpy`
+    - `docker run -it --rm oqmduser/qmpy`
   - qmpy environment with file synchronization
-    - `docker run -it --rm -v <some_local_path>:/workspace $DOCKERID/qmpy`
+    - `docker run -it --rm -v <some_local_path>:/workspace oqmduser/qmpy`
   - Overwrite entrypoint 
-    - `docker run -it --rm --entrypoint "/bin/bash" $DOCKERID/qmpy`
+    - `docker run -it --rm --entrypoint "/bin/bash" oqmduser/qmpy`
