@@ -6,10 +6,10 @@
   - `docker build -t $DOCKERID/qmpy .`
   
 - Pull pre-built qmpy image
-  - `docker pull mervyn1937/qmpy`
+  - `docker pull $DOCKERID/qmpy`
 
 ## Use Docker to launch qmpy
   - qmpy environment
-    - `docker run -it --rm $DOCKERID/qmpy`
+    - `docker run -it --rm -v <some_local_path>:/workspace $DOCKERID/qmpy`
   - Overwrite entrypoint 
     - `docker run -it --rm --entrypoint "/bin/bash" $DOCKERID/qmpy`
